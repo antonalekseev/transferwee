@@ -37,7 +37,7 @@ files from a `we.tl' or `wetransfer.com/downloads' URLs and upload files that
 will be shared via emails or link.
 """
 
-from typing import Any, Dict, List, Optional, Union
+import argparse
 import binascii
 import functools
 import getpass
@@ -49,10 +49,9 @@ import re
 import time
 import urllib.parse
 from sys import exit
-import argparse
+from typing import Any, Dict, List, Optional, Union
 
 import requests
-
 
 WETRANSFER_API_URL = "https://wetransfer.com/api/v4/transfers"
 WETRANSFER_DOWNLOAD_URL = WETRANSFER_API_URL + "/{transfer_id}/download"

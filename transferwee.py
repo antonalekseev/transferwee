@@ -27,10 +27,6 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-# /// script
-# dependencies = ["requests"]
-# ///
-
 """
 Download/upload files via wetransfer.com
 
@@ -52,6 +48,8 @@ import os.path
 import re
 import time
 import urllib.parse
+from sys import exit
+import argparse
 
 import requests
 
@@ -622,10 +620,7 @@ def upload(
     return shortened_url
 
 
-if __name__ == "__main__":
-    from sys import exit
-    import argparse
-
+def cli():
     log = logging.getLogger(__name__)
     log.setLevel(logging.INFO)
     log.addHandler(logging.StreamHandler())
@@ -717,3 +712,7 @@ if __name__ == "__main__":
     if args.action == "upload":
         print(upload(args.files, args.n, args.m, args.f, args.t))
         exit(0)
+
+
+if __name__ == "__main__":
+    cli()

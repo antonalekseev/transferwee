@@ -1,3 +1,12 @@
+[project]
+name = "transferwee"
+version = "0.0.1a1"
+dependencies = [
+  "requests"
+]
+[project.scripts]
+  transferwee = "transferwee:cli"
+
 [tool.black]
 # honor PEP 8
 line-length = 79

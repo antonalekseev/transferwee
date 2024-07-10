@@ -27,6 +27,9 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
+# /// script
+# dependencies = ["requests"]
+# ///
 
 """
 Download/upload files via wetransfer.com
